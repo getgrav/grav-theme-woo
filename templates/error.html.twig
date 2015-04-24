@@ -1,0 +1,20 @@
+{% extends 'partials/base.html.twig' %}
+{% block content %}
+<div id="content">
+    <div class="row_10">
+        <div class="container">
+          <div class="row block-404">
+            <div class="col-lg-7 col-md-7 col-sm-7">
+                <figure class="img-polaroid"><img src="{{ theme_url }}/img/404.jpg" alt=""></figure>
+            </div>
+            <div class="col-lg-3 col-md-5 col-sm-5 forminfo">
+                <div>
+                    <h2 class="title404_1">Error {{ page.header.http_response_code }}</h2>
+                    {{ page.content }}
+                </div>
+            </div>  
+          </div> 
+        </div>
+    </div>
+</div>
+{% endblock %}
