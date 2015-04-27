@@ -1,6 +1,6 @@
 <section id='features'>
   {% for row in page.header.rows %}
-    <div class="row feature">
+    <div class="row feature {{row.name}}">
 
       <div class="{% if row.image or row.video %}six{% else %}twelve{% endif %} columns {{ row.description_position }}">
         <h3>{{ row.title }}</h3>
