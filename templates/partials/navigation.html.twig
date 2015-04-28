@@ -14,7 +14,7 @@
         {% endfor %}
         {% for mitem in site.menu %}
             <li>
-                <a href="{% if page.activeChild %}{{ base_url_absolute }}/{{ mitem.link }}{% else %}{{ mitem.link }}{% endif %}" {% if not page.activeChild %}class="smoothscroll"{% endif %}>{{ mitem.text }}</a>
+                <a href="{% if page.activeChild and "#" in mitem.link %}{{ base_url_absolute }}/{{ mitem.link }}{% else %}{{ mitem.link }}{% endif %}" {% if not page.activeChild and not "#" in mitem.link  %}class="smoothscroll"{% endif %}>{{ mitem.text }}</a>
             </li>
         {% endfor %}
     </ul>
