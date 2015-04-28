@@ -1,12 +1,8 @@
 {% extends 'partials/base.html.twig' %}
 {% block content %}
-    <div id="content">
-        <div class="row_9">
-            <div class="container">
-                <div class="row {{ page.header.class }}">
-                 {{ page.content }}
-             </div> 
-         </div>
-     </div>
+ <section id="styles" style="padding: 90px 0 72px; background: #fff;">
+  <div class="row">
+   {{ page.content }}
  </div>
+</section>
 {% endblock %}

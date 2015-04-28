@@ -5,7 +5,7 @@
     {% for page in pages.children %}
         {% if page.visible %}
             {% set current_page = (page.active or page.activeChild) ? 'active' : '' %}
-                <li class="{{ current_page }} smoothscroll">
+                <li class="{{ current_page }}">
                     <a href="{{ page.url }}">
                         {{ page.menu }}
                     </a>
@@ -14,7 +14,7 @@
         {% endfor %}
         {% for mitem in site.menu %}
             <li>
-                <a href="{{ mitem.link }}" class="smoothscroll">{{ mitem.text }}</a>
+                <a href="{% if page.activeChild %}{{ base_url_absolute }}/{{ mitem.link }}{% else %}{{ mitem.link }}{% endif %}" {% if not page.activeChild %}class="smoothscroll"{% endif %}>{{ mitem.text }}</a>
             </li>
         {% endfor %}
     </ul>
