@@ -1,7 +1,7 @@
 {
     "name": "getgrav/grav-theme-woo",
     "type": "grav-theme",
-    "description": "Woo is a clean, modern, landing page site template Styleshout. It has a fully responsive design and was tested on all major browser and mobile devices.",
+    "description": "Woo is a clean, modern, landing page site template by Styleshout. It has a fully responsive design and was tested on all major browser and mobile devices.",
     "keywords": ["theme","grav", "woo"],
     "homepage": "http://getgrav.org",
     "license": "CC BY 3.0",
