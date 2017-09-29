@@ -9,7 +9,7 @@
         <title>{% if header.title %}{{ header.title }} | {% endif %}{{ site.title }}</title>
         {% include 'partials/metadata.html.twig' %}
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-        <link rel="icon" type="image/png" href="{{ theme_url }}/images/favicon.png" />
+        <link rel="icon" type="image/png" href="{{ url('theme://images/favicon.png') }}" />
 
          {% block stylesheets %}
                 {% do assets.addCss('theme://css/default.css') %}
@@ -19,14 +19,14 @@
                 {% do assets.addCss('theme://css/prettyPhoto.css') %}
         {% endblock %}
         {{ assets.css() }}
-        <script src="{{ theme_url }}/js/modernizr.js"></script>
+        {% do assets.addJs('/js/modernizr.js') %}
         {% endblock head%}
     </head>
     <body>
 
         <div id="preloader">
             <div id="status">
-                <img src="{{ theme_url }}/images/preloader.gif" height="64" width="64" alt="">
+                <img src="{% url('theme://images/preloader.gif') }}" height="64" width="64" alt="">
             </div>
         </div>
 
