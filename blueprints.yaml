@@ -1,5 +1,5 @@
 name: Woo
-version: 1.2.0
+version: 1.3.0
 description: "Woo is a clean, modern, landing page site template by Styleshout. It has a fully responsive design and was tested on all major browser and mobile devices."
 icon: group
 author:
@@ -11,6 +11,8 @@ demo: http://demo.getgrav.org/woo-skeleton
 keywords: woo, theme, modern, fast, responsive, html5, css3
 bugs: https://github.com/getgrav/grav-theme-woo/issues
 license: MIT
+dependencies:
+  - { name: grav, version: '>=1.5.10' }
 
 form:
   validation: loose
