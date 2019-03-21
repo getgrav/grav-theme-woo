@@ -57,7 +57,7 @@
             {% do assets.addJs('theme://js/main.js') %}
             
             {{ assets.js()|raw }}
-            {{ assets.js('bottom') }} 
+            {{ assets.js('bottom')|raw }} 
         {% endblock %}  
     </body>
 </html>
