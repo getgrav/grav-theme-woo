@@ -1,7 +1,7 @@
 <section id="pricing">
 
   <div class="row section-head">
-    {{ content }}
+    {{ content|raw }}
   </div>
 
   <div class="row">
@@ -14,7 +14,7 @@
 
             <ul class="features">
               {% for feature in column.features %}
-               <li>{{ feature.name }}</li> 
+               <li>{{ feature.name }}</li>
              {% endfor %}
             </ul>
 
@@ -23,10 +23,10 @@
                <a class="button" href="{{ button.url }}">{{ button.text }}</a>
               {% endfor %}
             </footer>
-       </div> 
+       </div>
      </div>
    {% endfor %}
  </div>
 </div>
 
-</section> 
+</section>

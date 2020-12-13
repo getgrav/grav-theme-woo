@@ -3,7 +3,7 @@
         <span><i class="quote-left fa fa-quote-left"></i></span>
         <div class="text-container">
             <div class="twelve columns">
-                {{ content }}
+                {{ content|raw }}
             </div>
             <div class="twelve columns flex-container">
                 <div class="flexslider">
@@ -15,7 +15,7 @@
                                     <p> {{ item.quote }}</p>
                                     <cite>{{ item.title }}</cite>
                                 </blockquote>
-                            </li> 
+                            </li>
                         {% endfor %}
                     </ul>
 
