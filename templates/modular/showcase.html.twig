@@ -3,7 +3,7 @@
    <div class="twelve columns">
      <div class="hero-text">
       <h1 class="responsive-headline">{{ page.header.title }}</h1>
-      {{ content }}
+      {{ content|raw }}
     </div>
 
     {% if page.header.buttons %}
@@ -15,7 +15,7 @@
    {% endif %}
 
    <div class="hero-image">
-    {{ page.media[page.header.showcase_image].html() }}
+    {{ page.media[page.header.showcase_image].html()|raw }}
   </div>
 </div>
 </div>

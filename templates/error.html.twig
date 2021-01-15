@@ -3,8 +3,7 @@
 <section id="error" style="padding: 90px 0 72px; background: #fff;">
     <div class="row section-head">
         <h1>Error {{ page.header.http_response_code }}</h1>
-        {{ page.content }}
+        {{ page.content|raw }}
     </div>
 </section>
 {% endblock %}
-    

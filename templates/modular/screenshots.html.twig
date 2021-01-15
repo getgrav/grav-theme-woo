@@ -1,6 +1,6 @@
 <section id="screenshots">
     <div class="row section-head">
-        {{ content }}
+        {{ content|raw }}
     </div>
     <div class="row">
         <div class="twelve columns">
@@ -9,14 +9,14 @@
                     <div class="columns item">
                         <div class="item-wrap">
                             <a href="{{ page.url(true) }}/{{ item.filename }}" data-imagelightbox="a" >
-                                {{ item.cropZoom(700, 700).html( item.filename|replace({'-': " "}), item.filename|replace({'-': " "})) }}
-                                <div class="overlay"></div> 
+                                {{ item.cropZoom(700, 700).html( item.filename|replace({'-': " "}), item.filename|replace({'-': " "}))|raw }}
+                                <div class="overlay"></div>
                                 <div class="link-icon"><i class="icon-plus"></i></div>
                             </a>
                         </div>
-                    </div> 
+                    </div>
                 {% endfor %}
-            </div> 
-        </div> 
-    </div> 
+            </div>
+        </div>
+    </div>
 </section>
