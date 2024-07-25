@@ -2,47 +2,47 @@
 /*
 /* Main JS
 /*
------------------------------------------------------------------------------------*/  
+-----------------------------------------------------------------------------------*/
 
 (function($) {
 
 	/*---------------------------------------------------- */
   	/* Preloader
-   ------------------------------------------------------ */ 
-  	$(window).load(function() {
+   ------------------------------------------------------ */
+  	$(window).on('load', function() {
 
-   	// will first fade out the loading animation 
-    	$("#status").fadeOut("slow"); 
+   	// will first fade out the loading animation
+    	$("#status").fadeOut("slow");
 
-    	// will fade out the whole DIV that covers the website. 
-    	$("#preloader").delay(500).fadeOut("slow").remove();     
-      
-    	$('.js #hero .hero-image img').addClass("animated fadeInUpBig"); 
-      $('.js #hero .buttons a.trial').addClass("animated shake");    
+    	// will fade out the whole DIV that covers the website.
+    	$("#preloader").delay(500).fadeOut("slow").remove();
 
-  	}) 
+    	$('.js #hero .hero-image img').addClass("animated fadeInUpBig");
+      $('.js #hero .buttons a.trial').addClass("animated shake");
+
+  	})
 
 
   	/*---------------------------------------------------- */
   	/* Mobile Menu
-   ------------------------------------------------------ */  
-  	var toggle_button = $("<a>", {                         
-                        id: "toggle-btn", 
+   ------------------------------------------------------ */
+  	var toggle_button = $("<a>", {
+                        id: "toggle-btn",
                         html : "Menu",
                         title: "Menu",
-                        href : "#" } 
+                        href : "#" }
                         );
   	var nav_wrap = $('nav#nav-wrap')
-  	var nav = $("ul#nav");  
+  	var nav = $("ul#nav");
 
-  	/* id JS is enabled, remove the two a.mobile-btns 
+  	/* id JS is enabled, remove the two a.mobile-btns
   	and dynamically prepend a.toggle-btn to #nav-wrap */
-  	nav_wrap.find('a.mobile-btn').remove(); 
-  	nav_wrap.prepend(toggle_button); 
+  	nav_wrap.find('a.mobile-btn').remove();
+  	nav_wrap.prepend(toggle_button);
 
   	toggle_button.on("click", function(e) {
    	e.preventDefault();
-    	nav.slideToggle("fast");     
+    	nav.slideToggle("fast");
   	});
 
   	if (toggle_button.is(':visible')) nav.addClass('mobile');
@@ -51,8 +51,8 @@
     	else nav.removeClass('mobile');
   	});
 
-  	$('ul#nav li a').on("click", function(){      
-   	if (nav.hasClass('mobile')) nav.fadeOut('fast');      
+  	$('ul#nav li a').on("click", function(){
+   	if (nav.hasClass('mobile')) nav.fadeOut('fast');
   	});
 
 
@@ -70,7 +70,7 @@
   	/* Smooth Scrolling
   	------------------------------------------------------ */
   	$('.smoothscroll').on('click', function (e) {
-	 	
+
 	 	e.preventDefault();
 
    	var target = this.hash,
@@ -120,27 +120,27 @@
   	/* Waypoints Animations
    ------------------------------------------------------ */
   	$('.js .design').waypoint(function() {
-   	$('.js .design .feature-media').addClass( 'animated pulse' );    
+   	$('.js .design .feature-media').addClass( 'animated pulse' );
   	}, { offset: 'bottom-in-view' });
 
   	$('.js .responsive').waypoint(function() {
-   	$('.js .responsive .feature-media').addClass( 'animated pulse' );    
+   	$('.js .responsive .feature-media').addClass( 'animated pulse' );
   	}, { offset: 'bottom-in-view' });
 
   	$('.js .cross-browser').waypoint(function() {
-   	$('.js .cross-browser .feature-media').addClass( 'animated pulse' ); 
+   	$('.js .cross-browser .feature-media').addClass( 'animated pulse' );
   	}, { offset: 'bottom-in-view' });
 
   	$('.js .video').waypoint(function() {
-   	$('.js .video .feature-media').addClass( 'animated pulse' );     
+   	$('.js .video .feature-media').addClass( 'animated pulse' );
   	}, { offset: 'bottom-in-view' });
 
   	$('.js #subscribe').waypoint(function() {
-   	$('.js #subscribe input[type="email"]').addClass( 'animated fadeInLeftBig show' ); 
-    	$('.js #subscribe input[type="submit"]').addClass( 'animated fadeInRightBig show' );   
+   	$('.js #subscribe input[type="email"]').addClass( 'animated fadeInLeftBig show' );
+    	$('.js #subscribe input[type="submit"]').addClass( 'animated fadeInRightBig show' );
   	}, { offset: 'bottom-in-view' });
 
-  	
+
   	/*----------------------------------------------------*/
   	/* Flexslider
   	/*----------------------------------------------------*/
@@ -194,12 +194,12 @@
       {
       	var description = $( 'a[href="' + $( '#imagelightbox' ).attr( 'src' ) + '"] img' ).attr( 'alt' );
         	if( description.length > 0 )
-         	$( '<div id="imagelightbox-caption">' + description + '</div>' ).appendTo( 'body' );        
+         	$( '<div id="imagelightbox-caption">' + description + '</div>' ).appendTo( 'body' );
       },
       captionOff = function()
       {
        	$( '#imagelightbox-caption' ).remove();
-      };     
+      };
 
       var instanceA = $( 'a[data-imagelightbox="a"]' ).imageLightbox(
       {
@@ -209,10 +209,10 @@
          onLoadEnd:   function() { captionOn(); activityIndicatorOff(); }
 
       });
-        
-    }      
+
+    }
     else {
-         
+
       /*----------------------------------------------------*/
    	/* prettyPhoto for old IE
    	/*----------------------------------------------------*/
@@ -239,7 +239,7 @@
       	deeplinking: false,
       	social_tools: false
 
-      }); 
+      });
 
     }
 
