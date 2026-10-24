@@ -140,7 +140,7 @@
 				{
 					image = $( '<img ' + options.selector + ' />' )
 					.attr( 'src', target.attr( 'href' ) )
-					.load( function()
+					.on( 'load', function()
 					{
 						image.appendTo( 'body' );
 						setImage();
@@ -169,10 +169,10 @@
 						{
 							var nextTarget = targets.eq( targets.index( target ) + 1 );
 							if( !nextTarget.length ) nextTarget = targets.eq( 0 );
-							$( '<img />' ).attr( 'src', nextTarget.attr( 'href' ) ).load();
+							$( '<img />' ).attr( 'src', nextTarget.attr( 'href' ) );
 						}
 					})
-					.error( function()
+					.on( 'error', function()
 					{
 						if( options.onLoadEnd !== false ) options.onLoadEnd();
 					})
@@ -273,7 +273,7 @@
 			});
 		}
 
-		$( document ).on( 'click', this.selector, function( e )
+		this.on( 'click', function( e )
 		{
 			if( !isTargetValid( this ) ) return true;
 			e.preventDefault();

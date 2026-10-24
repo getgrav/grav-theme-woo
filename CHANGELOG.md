@@ -1,3 +1,12 @@
+# v1.3.2
+## 10/24/2026
+
+1. [](#bugfix)
+    * Updated the theme's JavaScript to work with jQuery 3, which current Grav versions load
+    * The page no longer stays stuck behind the loading animation
+    * The screenshot lightbox opens its images again
+    * Stopped loading the old jQuery Migrate script, which kept images from loading on jQuery 3
+
 # v1.3.1
 ## 01/15/2021
 
